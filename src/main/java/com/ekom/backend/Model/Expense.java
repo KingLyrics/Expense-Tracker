@@ -12,6 +12,7 @@ public class Expense {
     private Long id;
     private String description;
     private Double amount;
+    @Enumerated(EnumType.STRING)
     private ExpenseType category;
     private LocalDate date;
 
