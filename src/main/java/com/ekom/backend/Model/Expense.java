@@ -1,9 +1,11 @@
 package com.ekom.backend.Model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.time.LocalDate;
 
+@Data
 @Entity
 @Table(name = "Expenses")
 public class Expense {
@@ -15,5 +17,8 @@ public class Expense {
     @Enumerated(EnumType.STRING)
     private ExpenseType category;
     private LocalDate date;
+
+    public Expense(){}
+
 
 }
